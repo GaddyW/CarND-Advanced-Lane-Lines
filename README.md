@@ -1,6 +1,10 @@
 ## Using computer vision techniques to identify lane lines 
 
-This project is part of the Udacity self-driving car nanodegree.  I use a number of computer vision techniques to identify lane lines on a curving road in differing road conditions.
+This project is part of the Udacity self-driving car nanodegree.  I use a number of computer vision techniques to identify lane lines on a curving road in differing road conditions. Output videos of the work are stored here:
+- ./output_images/output_project_video.mp4 "Project Video"
+- ./output_images/output_challenge_video.mp4 "Challenge Video"
+
+### The work pipeline is as follows
 * Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
 * Apply a distortion correction to raw images.
 * Use color transforms, gradients, etc., to create a thresholded binary image.
