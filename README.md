@@ -1,18 +1,28 @@
-## Writeup Template
+## Using computer vision techniques to identify lane lines 
 
-### Sources
-#a.	Real time lane detection for autonomous vehicles, Assidiq et. al.
-#b.	Saad Bedros, Hough Transform and Thresholding lecture, University of Minnesota 
-#c.	Lane detection techniques review, Kaur and Kumar
-#d.	An Adaptive Method for Lane Marking Detection Based on HSI Color Model, Tran and Cho
-#e.	LANE CHANGE DETECTION AND TRACKING FOR A SAFE-LANE APPROACH IN REAL TIME VISION BASED NAVIGATION SYSTEMS, Somasundaram, Ramachandran, Kavitha
-#f.	A Robust Lane Detection and Departure Warning System, Mrinal Haloi and Dinesh Babu Jayagopi
-#g.	Steerable filters
-#h.	A layered approach to robust lane detection at night, Hayes and Pankati
-#i.	SHADOW DETECTION USING COLOR AND EDGE INFORMATION
-#j. fillpoly example:  https://www.programcreek.com/python/example/89415/cv2.fillPoly
-#k. search around poly from coursework.  I did it in y, and this is convenient in x
-#extracting frames from video:  https://stackoverflow.com/questions/33311153/python-extracting-and-saving-video-frames
+This project is part of the Udacity self-driving car nanodegree.  I use a number of computer vision techniques to identify lane lines on a curving road in differing road conditions.
+* Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
+* Apply a distortion correction to raw images.
+* Use color transforms, gradients, etc., to create a thresholded binary image.
+* Apply a perspective transform to rectify binary image ("birds-eye view").
+* Detect lane pixels and fit to find the lane boundary.
+* Determine the curvature of the lane and vehicle position with respect to center.
+* Warp the detected lane boundaries back onto the original image.
+* Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
+
+### While completing the project, I leaned on the following sources:
+- Real time lane detection for autonomous vehicles, Assidiq et. al.
+- Saad Bedros, Hough Transform and Thresholding lecture, University of Minnesota 
+- Lane detection techniques review, Kaur and Kumar
+- An Adaptive Method for Lane Marking Detection Based on HSI Color Model, Tran and Cho
+- LANE CHANGE DETECTION AND TRACKING FOR A SAFE-LANE APPROACH IN REAL TIME VISION BASED NAVIGATION SYSTEMS, Somasundaram, Ramachandran, Kavitha
+- A Robust Lane Detection and Departure Warning System, Mrinal Haloi and Dinesh Babu Jayagopi
+- Steerable filters
+- A layered approach to robust lane detection at night, Hayes and Pankati
+- SHADOW DETECTION USING COLOR AND EDGE INFORMATION
+- fillpoly example:  https://www.programcreek.com/python/example/89415/cv2.fillPoly
+- search around poly from coursework.  I did it in y, and this is convenient in x
+- extracting frames from video:  https://stackoverflow.com/questions/33311153/python-extracting-and-saving-video-frames
 
 
 
@@ -31,33 +41,6 @@
 
 
 
-
-**Advanced Lane Finding Project**
-
-The goals / steps of this project are the following:
-
-* Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
-* Apply a distortion correction to raw images.
-* Use color transforms, gradients, etc., to create a thresholded binary image.
-* Apply a perspective transform to rectify binary image ("birds-eye view").
-* Detect lane pixels and fit to find the lane boundary.
-* Determine the curvature of the lane and vehicle position with respect to center.
-* Warp the detected lane boundaries back onto the original image.
-* Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
-
-
-
-## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
-
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
-
----
-
-### Writeup / README
-
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Advanced-Lane-Lines/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
-
-You're reading it!
 
 ### Camera Calibration
 
